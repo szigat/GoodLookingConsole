@@ -3,10 +3,18 @@ using System.Collections.Generic;
 
 namespace GoodLookingConsole
 {
+    public enum Status
+    {
+        Active,
+        Inactive
+    }
+
     public class Environment
     {
         public int Id { get; set; }
         public string Name { get; set; }
+
+        public Status Status { get; set; }
 
         public static IEnumerable<Environment> GetEnvironments()
         {
